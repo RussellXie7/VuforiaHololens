@@ -14,12 +14,9 @@ namespace Vuforia
     public class DefaultTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
-        public Fade[] fadeManagers;
-
         #region PRIVATE_MEMBER_VARIABLES
-
+ 
         private TrackableBehaviour mTrackableBehaviour;
-
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -71,24 +68,20 @@ namespace Vuforia
 
         private void OnTrackingFound()
         {
-            //Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-            //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+            Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
-            //// Enable rendering:
-            //foreach (Renderer component in rendererComponents)
-            //{
-            //    component.enabled = true;
-            //}
-
-
-            // do Fade
-            foreach (Fade fade_m in fadeManagers) fade_m.SendMessage("OnTrack");
+            // Enable rendering:
+            foreach (Renderer component in rendererComponents)
+            {
+                component.enabled = true;
+            }
 
             // Enable colliders:
-            //foreach (Collider component in colliderComponents)
-            //{
-            //    component.enabled = true;
-            //}
+            foreach (Collider component in colliderComponents)
+            {
+                component.enabled = true;
+            }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
@@ -96,21 +89,20 @@ namespace Vuforia
 
         private void OnTrackingLost()
         {
-            //Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-            //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+            Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
+            // Disable rendering:
+            foreach (Renderer component in rendererComponents)
+            {
+                component.enabled = false;
+            }
 
-            //// Do Fade
-            //Fade[] fadeManagers = GetComponentsInChildren<Fade>();
-
-            foreach (Fade fade_m in fadeManagers) fade_m.SendMessage("LostTrack");
-
-
-            //// Disable colliders:
-            //foreach (Collider component in colliderComponents)
-            //{
-            //    component.enabled = false;
-            //}
+            // Disable colliders:
+            foreach (Collider component in colliderComponents)
+            {
+                component.enabled = false;
+            }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
