@@ -5,12 +5,15 @@ namespace Vuforia
     public class PwcTarget : MonoBehaviour,
                              ITrackableEventHandler
     {
-        public Fade[] fadeManagers;
-        public GameObject[] UI_Elements;
+
+        public GameObject dataBoard;
+        public GameObject orangeTarget;
+        public GameObject coffeeTarget;
 
         #region PRIVATE_MEMBER_VARIABLES
 
         private TrackableBehaviour mTrackableBehaviour;
+        private bool boardFixed = false;
 
 
         #endregion // PRIVATE_MEMBER_VARIABLES
@@ -54,35 +57,30 @@ namespace Vuforia
             }
         }
 
-        void OnSelect()
-        {
-            foreach (Fade fade_m in fadeManagers)
-            {
-                Debug.Log("Wierd!!!!!!!!!!!!!!");
-                fade_m.gameObject.SendMessageUpwards("EnableHologram");
-                foreach (GameObject obj in UI_Elements)
-                {
-                    obj.SetActive(false);
-                }
-            }
-        }
-
         void CursorHover()
         {
-            foreach (GameObject obj in UI_Elements)
-            {
-                if (obj.activeSelf)
-                    obj.SendMessageUpwards("OnHover");
-            }
+            if (dataBoard.activeSelf && !boardFixed)
+                dataBoard.SendMessageUpwards("OnHover");
         }
 
         void CursorExit()
         {
-            foreach (GameObject obj in UI_Elements)
-            {
-                if (obj.activeSelf)
-                    obj.SendMessageUpwards("OnExit");
-            }
+
+            if (dataBoard.activeSelf && !boardFixed)
+                dataBoard.SendMessageUpwards("OnExit");
+
+        }
+
+        void OnSelect()
+        {
+            dataBoard.SendMessageUpwards("FixPosition");
+            dataBoard.SendMessageUpwards("EnableCollider");
+            boardFixed = true;
+
+            orangeTarget.SetActive(true);
+            coffeeTarget.SetActive(true);
+            gameObject.SetActive(false);
+
         }
 
         #endregion // PUBLIC_METHODS
@@ -105,7 +103,7 @@ namespace Vuforia
 
 
             // do Fade
-            foreach (Fade fade_m in fadeManagers) fade_m.SendMessage("OnTrack");
+            //foreach (GameObject info_element in info_elements) info_element.SendMessageUpwards("OnTrack");
 
             // Enable colliders:
             //foreach (Collider component in colliderComponents)
@@ -126,7 +124,7 @@ namespace Vuforia
             //// Do Fade
             //Fade[] fadeManagers = GetComponentsInChildren<Fade>();
 
-            foreach (Fade fade_m in fadeManagers) fade_m.SendMessage("LostTrack");
+            //foreach (GameObject info_element in info_elements) info_element.SendMessageUpwards("LostTrack");
 
 
             //// Disable colliders:

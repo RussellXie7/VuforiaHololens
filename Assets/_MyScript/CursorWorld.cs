@@ -34,7 +34,7 @@ public class CursorWorld : MonoBehaviour
             // Rotate the cursor to hug the surface of the hologram.
             this.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
             
-            if(hitInfo.collider.gameObject.name == "PwcLogoTarget")
+            if(hitInfo.collider.transform.root.gameObject.name == "PwcLogoTarget")
             {
                 hitInfo.collider.gameObject.SendMessageUpwards("CursorHover");
                 savedObj = hitInfo.collider.gameObject;

@@ -112,7 +112,7 @@ public class Gesture: MonoBehaviour {
 
         if(FocusedObject != null)
         {
-            FocusedObject.SendMessageUpwards("PerformManipulationUpate", cumulativeDelta);
+            //FocusedObject.SendMessageUpwards("PerformManipulationUpate", cumulativeDelta);
         }
     }
 
@@ -125,7 +125,7 @@ public class Gesture: MonoBehaviour {
 
         if(FocusedObject != null)
         {
-            FocusedObject.SendMessageUpwards("PerformManipulationStart", cumulativeDelta);
+            //FocusedObject.SendMessageUpwards("PerformManipulationStart", cumulativeDelta);
         }
     }
 

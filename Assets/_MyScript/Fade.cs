@@ -10,11 +10,6 @@ public class Fade : MonoBehaviour {
 
     private bool waiting = false;
     private Coroutine lastRoutine;
-    private float standard_x_rot_min = -115.0f;
-    private float standard_x_rot_max = -75.0f;
-    private float standard_y_rot_min = -20f;
-    private float standard_y_rot_max = 20f;
-
     /// <summary>
     /// To track the state about if we should go dim or go solid.
     /// </summary>

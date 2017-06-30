@@ -418,11 +418,11 @@
     <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\QCAR\Tarmac.xml">
       <PackagePath>Data\StreamingAssets\QCAR\Tarmac.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\QCAR\VuforiaHoloLens.xml">
-      <PackagePath>Data\StreamingAssets\QCAR\VuforiaHoloLens.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\Vuforia\pwcVuforia.xml">
+      <PackagePath>Data\StreamingAssets\Vuforia\pwcVuforia.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\Vuforia\VuforiaHoloLens.xml">
-      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaHoloLens.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\Vuforia\Vuforia.xml">
+      <PackagePath>Data\StreamingAssets\Vuforia\Vuforia.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\VuforiaWrapper.dll">
       <PackagePath>VuforiaWrapper.dll</PackagePath>
@@ -481,11 +481,11 @@
     <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\QCAR\Tarmac.dat">
       <PackagePath>Data\StreamingAssets\QCAR\Tarmac.dat</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\QCAR\VuforiaHoloLens.dat">
-      <PackagePath>Data\StreamingAssets\QCAR\VuforiaHoloLens.dat</PackagePath>
+    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\Vuforia\pwcVuforia.dat">
+      <PackagePath>Data\StreamingAssets\Vuforia\pwcVuforia.dat</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\Vuforia\VuforiaHoloLens.dat">
-      <PackagePath>Data\StreamingAssets\Vuforia\VuforiaHoloLens.dat</PackagePath>
+    <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\Vuforia\Vuforia.dat">
+      <PackagePath>Data\StreamingAssets\Vuforia\Vuforia.dat</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\Data\StreamingAssets\QCAR\Vuforia-English-word.vwl">
       <PackagePath>Data\StreamingAssets\QCAR\Vuforia-English-word.vwl</PackagePath>

@@ -28,10 +28,10 @@ Data\StreamingAssets\QCAR\StonesAndWood.xml
 Data\StreamingAssets\QCAR\Tarmac.dat
 Data\StreamingAssets\QCAR\Tarmac.xml
 Data\StreamingAssets\QCAR\Vuforia-English-word.vwl
-Data\StreamingAssets\QCAR\VuforiaHoloLens.dat
-Data\StreamingAssets\QCAR\VuforiaHoloLens.xml
-Data\StreamingAssets\Vuforia\VuforiaHoloLens.dat
-Data\StreamingAssets\Vuforia\VuforiaHoloLens.xml
+Data\StreamingAssets\Vuforia\pwcVuforia.dat
+Data\StreamingAssets\Vuforia\pwcVuforia.xml
+Data\StreamingAssets\Vuforia\Vuforia.dat
+Data\StreamingAssets\Vuforia\Vuforia.xml
 Properties\Default.rd.xml
 Resource.res
 Vuforia.dll
