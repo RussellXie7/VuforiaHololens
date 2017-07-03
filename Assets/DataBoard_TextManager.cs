@@ -39,35 +39,56 @@ public class DataBoard_TextManager: MonoBehaviour {
             case "fromPWC":
                 StartCoroutine(FadeOut(airtap));
                 StartCoroutine(FadeIn(welcome));
-                
+                break;
+
+            case "fromGoBack":
+                StartCoroutine(FadeOut(welcome));
+                StartCoroutine(FadeIn(airtap));
+
+                foreach (Text child in coffee.transform.GetComponentsInChildren<Text>())
+                {
+                    StartCoroutine(FadeOut(child));
+                }
+
+                foreach (Text child in orange.transform.GetComponentsInChildren<Text>())
+                {
+                    StartCoroutine(FadeOut(child));
+                }
+
                 break;
 
             case "fromOrange":
-                foreach (Text child in orange.transform.GetComponentsInChildren<Text>())
+                if (gameObject.GetComponent<DataBoard_Fade>().positionFixed)
                 {
-                    StartCoroutine(FadeIn(child));
-                }
+                    foreach (Text child in orange.transform.GetComponentsInChildren<Text>())
+                    {
+                        StartCoroutine(FadeIn(child));
+                    }
 
-                foreach (Text child in coffee.transform.GetComponentsInChildren<Text>())
-                {
-                    StartCoroutine(FadeOut(child));
-                }
+                    foreach (Text child in coffee.transform.GetComponentsInChildren<Text>())
+                    {
+                        StartCoroutine(FadeOut(child));
+                    }
 
-                StartCoroutine(FadeOut(welcome));
+                    StartCoroutine(FadeOut(welcome));
+                }
                 break;
 
             case "fromCoffee":
-                foreach (Text child in coffee.transform.GetComponentsInChildren<Text>())
+                if (gameObject.GetComponent<DataBoard_Fade>().positionFixed)
                 {
-                    StartCoroutine(FadeIn(child));
-                }
+                    foreach (Text child in coffee.transform.GetComponentsInChildren<Text>())
+                    {
+                        StartCoroutine(FadeIn(child));
+                    }
 
-                foreach (Text child in orange.transform.GetComponentsInChildren<Text>())
-                {
-                    StartCoroutine(FadeOut(child));
-                }
+                    foreach (Text child in orange.transform.GetComponentsInChildren<Text>())
+                    {
+                        StartCoroutine(FadeOut(child));
+                    }
 
-                StartCoroutine(FadeOut(welcome));
+                    StartCoroutine(FadeOut(welcome));
+                }
                 break;
         }
         count += 1;

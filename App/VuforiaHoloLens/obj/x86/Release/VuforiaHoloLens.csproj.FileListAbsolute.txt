@@ -1,10 +1,6 @@
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\VuforiaHoloLens.exe
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\VuforiaHoloLens.pdb
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\resources.pri
-C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\AppxManifest.xml
-C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\Core\AppxManifest.xml
-C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\Core\VuforiaHoloLens.exe
-C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\VuforiaHoloLens.build.appxrecipe
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\Microsoft.ApplicationInsights.dll
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\Microsoft.ApplicationInsights.PersistenceChannel.dll
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\Microsoft.ApplicationInsights.Extensibility.Windows.dll
@@ -210,3 +206,7 @@ C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\obj\x86\Release\qu
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\obj\x86\Release\qualifiers.txt.intermediate
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt
 C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\obj\x86\Release\ProjectArchitectures.txt
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\AppxManifest.xml
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\Core\AppxManifest.xml
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\Core\VuforiaHoloLens.exe
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\App\VuforiaHoloLens\bin\x86\Release\VuforiaHoloLens.build.appxrecipe

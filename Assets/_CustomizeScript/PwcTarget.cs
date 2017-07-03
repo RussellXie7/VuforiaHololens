@@ -10,10 +10,13 @@ namespace Vuforia
         public GameObject orangeTarget;
         public GameObject coffeeTarget;
 
+        [HideInInspector]
+        public bool found = false;
+
         #region PRIVATE_MEMBER_VARIABLES
 
         private TrackableBehaviour mTrackableBehaviour;
-        private bool boardFixed = false;
+
 
 
         #endregion // PRIVATE_MEMBER_VARIABLES
@@ -55,18 +58,20 @@ namespace Vuforia
             {
                 OnTrackingLost();
             }
+
+
         }
 
         void CursorHover()
         {
-            if (dataBoard.activeSelf && !boardFixed)
+            if (dataBoard.activeSelf)
                 dataBoard.SendMessageUpwards("OnHover");
         }
 
         void CursorExit()
         {
 
-            if (dataBoard.activeSelf && !boardFixed)
+            if (dataBoard.activeSelf)
                 dataBoard.SendMessageUpwards("OnExit");
 
         }
@@ -75,12 +80,34 @@ namespace Vuforia
         {
             dataBoard.SendMessageUpwards("FixPosition");
             dataBoard.SendMessageUpwards("EnableCollider");
-            boardFixed = true;
+
 
             orangeTarget.SetActive(true);
             coffeeTarget.SetActive(true);
             gameObject.SetActive(false);
 
+        }
+
+        void CheckFound()
+        {
+            if (found)
+            {
+                EnableCollider();
+            }
+            else
+            {
+                DisableCollider();
+            }
+        }
+
+        public void EnableCollider()
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = true;
+        }
+
+        public void DisableCollider()
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
         }
 
         #endregion // PUBLIC_METHODS
@@ -111,6 +138,8 @@ namespace Vuforia
             //    component.enabled = true;
             //}
 
+            EnableCollider();
+            found = true;
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
 
@@ -132,11 +161,18 @@ namespace Vuforia
             //{
             //    component.enabled = false;
             //}
-
+            DisableCollider();
+            found = false;
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 
 
         }
+
+        private void OnEnable()
+        {
+            found = false;
+        }
+
 
         #endregion // PRIVATE_METHODS
     }

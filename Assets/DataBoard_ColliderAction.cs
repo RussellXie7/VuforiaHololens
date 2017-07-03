@@ -13,7 +13,9 @@ public class DataBoard_ColliderAction : MonoBehaviour {
 
     void OnSelect()
     {
-        //gameObject.SendMessageUpwards("FixPosition");
+        DisableCollider();
+        gameObject.SendMessageUpwards("OnExit");
+        gameObject.SendMessageUpwards("GoBack");
         Debug.Log("The hitted Object is  " + gameObject.name);
 
     }
@@ -23,6 +25,14 @@ public class DataBoard_ColliderAction : MonoBehaviour {
         foreach(BoxCollider child in transform.GetComponentsInChildren<BoxCollider>())
         {
             child.enabled = true;
+        }
+    }
+
+    void DisableCollider()
+    {
+        foreach (BoxCollider child in transform.GetComponentsInChildren<BoxCollider>())
+        {
+            child.enabled = false;
         }
     }
 }

@@ -27,7 +27,8 @@ public class DataBoard_Fade : MonoBehaviour {
     private bool waiting = false;
     private Coroutine lastRoutine;
     // fix the position of board after click
-    private bool positionFixed = false;
+    [HideInInspector]
+    public bool positionFixed = false;
     private GameObject theCanvas;
     private Vector3 offset;
     private float adjusted_x;
@@ -78,6 +79,21 @@ public class DataBoard_Fade : MonoBehaviour {
         gameObject.SendMessageUpwards("FadeText","fromPWC");
     }
 
+    void GoBack()
+    {
+        Debug.Log("Going Back");
+        imageTarget.SetActive(true);
+        imageTarget.SendMessageUpwards("CheckFound");
+        // send message to fade back and enable transform tracking
+        gameObject.SendMessage("FadeText", "fromGoBack");
+
+        // set position fixed to false;
+        positionFixed = false;
+
+        // disable the other two image target -- looks no need
+
+    }
+
     void OnHover()
     {
         Debug.Log("OnHover is called");
@@ -93,7 +109,10 @@ public class DataBoard_Fade : MonoBehaviour {
     void OnExit()
     {
         CurrState = ChangeStates.goDim;
-        lastRoutine = StartCoroutine(BufferWait());
+        if (lastRoutine == null)
+        {
+            lastRoutine = StartCoroutine(BufferWait());
+        }
     }
 
     IEnumerator BufferWait()
