@@ -5,13 +5,13 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-VuforiaHoloLens.sln: 0CEDF57BF8DD25C009097C03A993EFDA
+VuforiaHoloLens.sln: 5CFFF26D6BACD46430156A0DDFB97818
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 VuforiaHoloLens\App.cs: E5991B88A885AD78786347BC13FAA8E9
 VuforiaHoloLens\Package.appxmanifest: F0C010EC3A5D0D32C4CB8F429EFFA1D4
 VuforiaHoloLens\project.json: 1D02BC64BAC0D041019673A1C4C51737
-VuforiaHoloLens\VuforiaHoloLens.csproj: 7AB301BACF41FE3F573BDED614F96122
+VuforiaHoloLens\VuforiaHoloLens.csproj: ABC1BC92F74A02B3CB47D2E7396208F8
 VuforiaHoloLens\VuforiaHoloLens.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
 VuforiaHoloLens\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
 VuforiaHoloLens\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
