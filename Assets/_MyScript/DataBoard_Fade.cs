@@ -57,8 +57,8 @@ public class DataBoard_Fade : MonoBehaviour {
             else if (CurrState == ChangeStates.goSolid)
             {
                 MakeSolid();
-                transform.position = Vector3.Lerp(transform.position, imageTarget.transform.position, 0.2f);
-                transform.rotation = Quaternion.Lerp(transform.rotation, imageTarget.transform.rotation, 0.2f);
+                transform.position = Vector3.Lerp(transform.position, imageTarget.transform.localPosition, 0.2f);
+                transform.rotation = Quaternion.Lerp(transform.rotation, imageTarget.transform.localRotation, 0.2f);
                 //transform.position = imageTarget.transform.position;
                 //transform.rotation = imageTarget.transform.rotation;
             }

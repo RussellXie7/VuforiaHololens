@@ -57,7 +57,7 @@ public class DataBoard_TextManager: MonoBehaviour {
 
                 break;
 
-            case "fromOrange":
+            case "OrangeTarget":
                 if (gameObject.GetComponent<DataBoard_Fade>().positionFixed)
                 {
                     foreach (Text child in orange.transform.GetComponentsInChildren<Text>())
@@ -74,7 +74,7 @@ public class DataBoard_TextManager: MonoBehaviour {
                 }
                 break;
 
-            case "fromCoffee":
+            case "StarbucksTarget":
                 if (gameObject.GetComponent<DataBoard_Fade>().positionFixed)
                 {
                     foreach (Text child in coffee.transform.GetComponentsInChildren<Text>())
@@ -86,7 +86,6 @@ public class DataBoard_TextManager: MonoBehaviour {
                     {
                         StartCoroutine(FadeOut(child));
                     }
-
                     StartCoroutine(FadeOut(welcome));
                 }
                 break;

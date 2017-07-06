@@ -15,7 +15,7 @@ namespace Vuforia
                                                 ITrackableEventHandler
     {
         public GameObject dataBoard;
-        //public GameObject myInfoPad;
+        public GameObject myInfoPad;
 
         #region PRIVATE_MEMBER_VARIABLES
 
@@ -85,7 +85,7 @@ namespace Vuforia
             {
                 component.enabled = true;
             }
-            //myInfoPad.SendMessage("OnTrack");
+            myInfoPad.SendMessage("OnTrack");
             dataBoard.SendMessageUpwards("FadeText", "fromCoffee");
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
@@ -107,7 +107,7 @@ namespace Vuforia
             {
                 component.enabled = false;
             }
-            //myInfoPad.SendMessage("OnLost");
+            myInfoPad.SendMessage("OnLost");
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
 

@@ -1,0 +1,4 @@
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\AAAA\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\AAAA\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\AAAA\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\RUSSE\UnityWorks\VuforiaHoloLens\AAAA\VuforiaHoloLens\VuforiaHoloLens.csproj;x86

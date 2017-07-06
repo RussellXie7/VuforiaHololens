@@ -17,6 +17,7 @@ public class ObjectFollwoing : MonoBehaviour {
     }
 
     public GameObject imageTarget;
+    public GameObject theCanvas;
 
 
 	// Use this for initialization
@@ -60,6 +61,14 @@ public class ObjectFollwoing : MonoBehaviour {
                 //Debug.Log("Getting Dimmer");
                 renderer.material.color -= new Color(0, 0, 0, .15f);
             }
+            if (renderer.material.color.a > 0.1)
+            {
+                theCanvas.SetActive(true);
+            }
+            else
+            {
+                theCanvas.SetActive(false);
+            }
         }
     }
 
@@ -71,6 +80,14 @@ public class ObjectFollwoing : MonoBehaviour {
             {
                 //Debug.Log("Getting Solide");
                 renderer.material.color += new Color(0, 0, 0, .05f);
+            }
+            if (renderer.material.color.a > 0.1)
+            {
+                theCanvas.SetActive(true);
+            }
+            else
+            {
+                theCanvas.SetActive(false);
             }
         }
     }
