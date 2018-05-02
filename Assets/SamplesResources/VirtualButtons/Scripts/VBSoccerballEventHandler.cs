@@ -44,7 +44,7 @@ public class VBSoccerballEventHandler : MonoBehaviour, IVirtualButtonEventHandle
     void Start()
     {
         // Get handle to the soccerball object
-        mSoccerball = transform.FindChild("soccerball").gameObject;
+        mSoccerball = transform.Find("soccerball").gameObject;
 
         // Register with the virtual buttons TrackableBehaviour
         VirtualButtonBehaviour vb =

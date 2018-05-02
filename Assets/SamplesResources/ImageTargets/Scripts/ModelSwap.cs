@@ -16,8 +16,8 @@ public class ModelSwap : MonoBehaviour
 
 	void Start () 
     {
-        mDefaultModel = this.transform.FindChild("teapot").gameObject;
-        mExtTrackedModel = this.transform.FindChild("tower").gameObject;
+        mDefaultModel = this.transform.Find("teapot").gameObject;
+        mExtTrackedModel = this.transform.Find("tower").gameObject;
         mActiveModel = mDefaultModel;
         mTrackableSettings = FindObjectOfType<TrackableSettings>();
     }

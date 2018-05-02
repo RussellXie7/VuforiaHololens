@@ -46,7 +46,7 @@ public class VirtualButtonEventHandler : MonoBehaviour,
         }
 
         // Get handle to the teapot object
-        mTeapot = transform.FindChild("VirtualButtons_teapot").gameObject;
+        mTeapot = transform.Find("VirtualButtons_teapot").gameObject;
 
         // The list of active materials
         mActiveMaterials = new List<Material>();
